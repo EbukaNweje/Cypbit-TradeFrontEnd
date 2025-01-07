@@ -35,7 +35,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://cypbit-trade-back-e-nd.vercel.app/api/login', {
+  fetch('https://cypbit-trade-back-e-nd-ashen.vercel.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ button.onclick = async (event) => {
         return
       }
       if (response.message === 'User have not been verified'){
-        window.location = `https://cypbittrade-dashboard.vercel.app/`;
+        window.location = `https://cypbit-trade-dash-board.vercel.app/`;
         console.log("object");
         return
       }else{
@@ -63,7 +63,7 @@ button.onclick = async (event) => {
          const id = localStorage?.getItem('userId')
         //  console.log(userId)
         sendLoginEmail()
-        window.location = `https://cypbittrade-dashboard.vercel.app/#/${id}`;
+        window.location = `https://cypbit-trade-dash-board.vercel.app/#/${id}`;
       }
     })
     .catch((error) => {

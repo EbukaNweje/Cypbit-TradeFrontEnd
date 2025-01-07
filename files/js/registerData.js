@@ -41,7 +41,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://cypbit-trade-back-e-nd.vercel.app/api/register', {
+  fetch('https://cypbit-trade-back-e-nd-ashen.vercel.app/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ button.onclick = async (event) => {
       console.log(response)
       const id = JSON.parse(localStorage.getItem('userId'))
       console.log("Local User Id", id);
-      window.location.href = `https://cypbittrade-dashboard.vercel.app/`;
+      window.location.href = `https://cypbit-trade-dash-board.vercel.app/`;
       
     })
     .catch((error) => {
